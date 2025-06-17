@@ -10,3 +10,9 @@ for (let index = 0; index < 16; index++) {
         columnDiv.append(rowDiv);
     }
 }
+
+const gridDivs = document.querySelectorAll(('.row'));
+
+gridDivs.forEach(el => el.addEventListener('mouseover', event => {
+  el.classList.add("color");
+}));
