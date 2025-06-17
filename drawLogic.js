@@ -20,9 +20,12 @@ function setGrid(gridSize) {
 
     const gridDivs = document.querySelectorAll(('.row'));
 
-    gridDivs.forEach(el => el.addEventListener('mouseover', event => {
-        el.classList.add("color");
-    }));
+    for (let i = 0; i < gridDivs.length; i++) {
+        gridDivs[i].addEventListener('mouseover', event => {
+        gridDivs[i].style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)} ${Math.floor(Math.random() * 256)} ${Math.floor(Math.random() * 256)})`;
+        });
+        
+    }
 }
 
 setGrid(16);
